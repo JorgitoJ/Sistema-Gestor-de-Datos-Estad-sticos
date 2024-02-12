@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block title %}
+        Acerca de Nosotros
+    {% endblock title %}
+
+    {% block content %}
+    <header class="iheader">
+        <div class="logo">
+            <img src="{% static 'imag/índice.png' %}" alt="Logotipo de Salud Pública">
+          <h2 style="padding-left: 300px;">Acerca de Nosotros</h2>
+        </div>
+        <nav>
+          <a href="{% url 'principal' %}"><button type="button" class="btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+          </svg></button></a>
+         
+        </nav>        
+      </header>
+
+      <div class="contenedor" style="margin: 170px;margin-top: 25px; margin-bottom: 10px;" >
+        <div class="s">
+            <img src="{% static 'imag/young-male-doctor-working-laptop-computer-sitting-medical-office-190262901.jpg' %}" alt="Doctor en PC" style="height: 200px;border-radius: 20px; ">
+            <p style="padding: 30px;">El Sistema Gestor de Datos Estadísticos (SGDE) es un sitio creado para el buen uso en los centros hospitalarios del país, brinda los servicios a diferentes departamentos del centro, surge sobre la base de una idea innovadora propuesta para la asignatura de Metodología de la Investigación Científica, como principal problema existente en la etapa comprendida en el año 2020, fue y es la pandemia del Covid-19, dado que se necesita informatizar al país en todos los aspectos habidos y por existir, planteándose así la siguiente problemática:</p>
+        </div>
+        <div class="s">
+            <p style="padding: 30px;"> “… la recogida de la información de los casos con complicaciones de Covid-19 por parte de los médicos y enfermeras de los 11 consultorios que tiene el Policlínico Wilfredo Díaz, del poblado de Torriente, municipio Jagüey Grande, provincia Matanzas, presenta constantemente atrasos en la entrega al departamento de Estadística y a la vez este, sus partes a provincia …”</p>
+            <img src=" {% static 'imag/declaracion-renta-kAs-U160565165961juE-624x385@Diario Sur.jpg' %}"  alt="Problematica" style="height: 200px;border-radius: 20px;">
+        </div>
+        <div class="s">
+          <img src="  {% static 'imag/successful-project-managers-blog.png' %} " alt="successful-project-managers-blog" style="height: 200px;border-radius: 20px; ">
+          <p style="padding: 30px;">Un objetivo simple…permite acelerar la gestión de información de datos estadísticos sobre la Covid-19 en instituciones de Salud, con el SGDE, se mejora en cuanto a la agilización de la entrega de la información en las instituciones su eficiencia en la seguridad y fiabilidad, ayudando así a impulsar la innovación, la inclusión y el acceso en toda la industria.  </p>
+        </div>
+    </div>
+
+
+    {% endblock content %}
+
+
+
+

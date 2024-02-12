@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Ingresar nuevo Usuario
+{% endblock title %}
+
+{% block content %}
+{% include 'header.html' %}
+<div class="nuevo">
+    <h4 style="text-align: center;"> 
+        Ingresar un Nuevo Usuario</h4><br>
+        <div style="justify-content: center;">
+      <form class="new" id="new">
+
+        <div class="pack_nombre input-group mb-3" id="pack_nombre" style="justify-content: center;">
+            <label class="input-group-text" id="inputGroup-sizing-default">Nombre</label>
+            <div class="adyacente"> 
+            <input type="text" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nombre" name="nombre" id="nombre">
+            
+          </div>
+           </div>
+
+        <div class="pack_nombre input-group mb-3" id="pack_nombre" style="justify-content: center;">
+          <label class="input-group-text" id="inputGroup-sizing-default">Apellidos</label>
+          <div class="adyacente"> 
+          <input type="text" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Apellidos" name="nombre" id="nombre">
+          
+        </div>
+         </div>
+
+          <div class="pack_CI input-group mb-3" id="pack_CI" style="justify-content: center;">
+
+            <label class="input-group-text" id="inputGroup-sizing-default">CI</label>
+
+            <div class="adyacente">
+            <input type="text" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Carnet de Identidad" name="CI" id="CI">
+          </div>
+          </div>
+
+          <div class="input-group mb-3" style="justify-content: center;" >
+            <label class="input-group-text" for="inputGroupSelect01">Departamento</label>
+            <select class="form-select" id="inputGroupSelect01" style="width: 100px">
+              <option selected>Elegir...</option>
+              <option value="1">Cuerpo de Guardia</option>
+              <option value="2">Laboratorio</option>
+              <option value="3">Departamento de Estadística</option>
+              <option value="3">Administrador</option>
+            </select>
+          </div>
+
+          <div class="pack_usuario input-group mb-3" id="pack_usuario" style="justify-content: center;">
+
+            <label class="input-group-text" id="inputGroup-sizing-default">Usuario</label>
+
+            <div class="adyacente">
+            <input type="text" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Usuario" name="usuario" id="usuario">
+            
+          </div>
+          </div>
+
+
+          <div class="pack_contra input-group mb-3" id="pack_contra" style="justify-content: center;">
+            <label class="input-group-text" id="inputGroup-sizing-default">Contraseña</label>
+            <div class="adyacente">
+            <input type="password" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Contraseña" name="contra" id="contra">
+          </div>
+          </div>
+          <div class="hcbutton">
+            <button type="submit" class="btn btn-outline-primary">Ingresar</button>
+            <a href="{% url 'GestionarUser' %}"><button type="button" class="btn btn-outline-primary">Cancelar</button></a>               
+           
+          </div>
+       
+        </form>
+      </div>
+        </div>
+
+
+{% endblock content %}
+
+
+
+

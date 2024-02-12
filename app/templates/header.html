@@ -1,0 +1,60 @@
+{% load static %}
+
+<!--Cabecera-->
+
+{% comment %} <header id="header" class="navbar sticky-top bg-white   flex-md-nowrap pe-3 py-0 align-items-center border-bottom ">
+
+    <a class="logo  col-md-3 col-lg-2  ps-5 align-items-center fs-1 text-decoration-none" href="{% url 'principal' %}"> <span
+            class="h2 ">MiApp</span></a>
+    <button class="navbar-toggler  d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+
+        <div class="nav-item text-nowrap d-flex flex-wrap align-items-center">
+
+            <ul class="nav mb-md-0 ">
+                <!--user-->
+                <li>
+                    <div class="p-1">
+                        <span class="me-2">Bienvenido. <strong>{{ request.user | escape }}</strong>.</span>
+                    </div>
+                </li>
+
+                {% if request.user.is_staff %}
+                {% endif %}
+                {#                <li>#}
+                {#                    <a href="{% url 'ayuda' %}"#}
+                {#                       class="d-flex align-items-center  mb-2 mb-lg-0 text-dark text-decoration-none">#}
+                {#                        <img class="p-1 mb-1  " src=" {% static  'imag/bootstrap-icons/question-circle.svg' %}"#}
+                {#                             alt="ayuda" width="28" height="28">#}
+                {#                    </a>#}
+                {#                </li>#}
+
+                <li class="ms-3">
+                    <a class="" href="{% url 'logout' %}" id="logout" title="Salir">
+                        <img src=" {% static  'imag/bootstrap-icons/power.svg' %}" alt="Desconectarse"
+                             class="rounded-circle" width="24" height="24">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header> {% endcomment %}
+<header class="iheader">
+    <div class="logo">
+     <img src="{% static 'imag/índice.png' %}" alt="Logotipo de Salud Pública">
+      <h4>Sistema Gestor de Datos Estadísticos</h4>
+    </div>
+    <nav>
+      <a href="{% url 'AboutUs' %}" ><button type="button" class="btn btn-outline-primary">Acerca de Nosotros</button></a>
+      <li class="ms-3">
+        <a  href="{% url 'logout' %}" id="logout" title="Salir">
+            <button type="button" class="btn btn-outline-primary">Salir</button>
+        </a>
+    </li>
+    </nav>
+    
+  </header>

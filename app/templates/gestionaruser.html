@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Gestionar Usuario
+{% endblock title %}
+{% block content %}
+{% include 'header.html' %}
+    <div class="lado">
+        {% include 'sidebar.html' %}
+        <article class="medioo" style="border-radius: 20px;">
+        <h2 style="text-align: center;">Gestión de Usuarios</h2><br>
+            <div class="hcbutton">
+        <a href="{% url 'nuevousuario' %}"><button type="button" class="btn btn-outline-primary">Ingresar Usuario</button></a>        
+        <a href="Modificar Usuario.html"><button type="button" class="btn btn-outline-primary">Modificar Usuario</button></a>
+        <a href="Eliminar Usuario.html"><button type="button" class="btn btn-outline-danger">Eliminar Usuario</button></a>
+            </div>
+       </article>
+
+    </div>
+
+{% include 'footer.html' %}
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Mostrar{% endblock title %}
+{% block content %}
+{% include 'header.html' %}
+
+<div class="contenedor">
+    <h4 style="text-align: center;">Hoja de Cargo</h4>
+<table id="example" class="table table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha Inicio de Síntomas</th>
+            <th>Fecha Tomado de Muestras</th>
+            <th>Consultorio</th>
+            <th>Resultado</th>
+            <th>Fecha Actual</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for informepcr in object_list %}
+            <tr>
+                <td>{{informepcr.nombre}}</td>
+                <td>{{informepcr.apellido}}</td>
+                <td>{{informepcr.fechais}}</td>
+                <td>{{informepcr.fechatm}}</td>
+                <td>{{informepcr.consultorio}}</td>
+                <td>{{informepcr.resultado}}</td>
+                <td>{{informepcr.fecha}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="hcbutton">
+    <a href="{% url 'informepcr' %}"><button type="button" class="btn btn-outline-primary">Atrás</button></a>
+  </div>
+
+</div>
+{% endblock%}
+
+{% block scripts %}
+
+    <script type="application/javascript">
+        $(function () {
+            $('#UsuarioTable').DataTable({
+                responsive: true,
+                "language": {
+                    url: '{% static 'lib/es-ES.json ' %}'
+                }
+            });
+        });
+    </script>
+{% endblock %}

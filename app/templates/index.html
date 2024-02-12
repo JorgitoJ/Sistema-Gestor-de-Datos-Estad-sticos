@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    SGDE
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}"> 
+
+{% endblock %}
+{% block content %}
+    {% include "header.html" %}
+
+<div class="lado">
+        {% include "sidebar.html" %}    
+        <article class="medio" id="scroll">
+   
+            <p>
+              <strong><h3 style="text-align: center;">¿Porqué este sitio...?</h3></strong>      
+              La epidemiología y los métodos estadístico-matemáticos asociados a ella son campos que adquieren relevancia a la luz del enfrentamiento a la epidemia por el SARS-CoV-2 en Cuba. Para optimizar los esfuerzos en futuras batallas, que al parecer se avecinan, es necesario analizar críticamente lo que se ha hecho en ese sentido. El objetivo de este trabajo es identificar las insuficiencias en el enfoque epidemiológico y de las técnicas estadístico-matemáticas asociadas, en el tratamiento estadístico del curso de la epidemia de COVID-19. El uso de técnicas estadístico-matemáticas sin un fundamento epidemiológico adecuado, puede generar falsas expectativas y dificultar la toma de decisiones adecuadas. <br>
+              La aplicación de las Tecnologías de la Información y las Comunicaciones (TIC) en la medicina ha marcado un cambio de paradigma dentro de este sector. El empleo de las tecnologías digitales en la atención médica permite agilizar los trámites, la atención a los pacientes, apoyar los diagnósticos, facilitar el control de los procesos administrativos y garantizar la calidad de los servicios de salud. Además, contribuye a elevar la eficiencia y la reducción de errores en el tratamiento y monitoreo de enfermedades crónicas sin necesidad de aplicar procedimientos invasivos. En este ámbito, las redes de datos constituyen medios de comunicación fundamentales para la integración y el intercambio de información entre los diferentes equipos médicos. 
+             </p>
+           
+       </article>
+</div>
+
+{% include "footer.html" %}
+{% endblock content %}
+
+{% block scripts %}
+
+{% endblock %}
+

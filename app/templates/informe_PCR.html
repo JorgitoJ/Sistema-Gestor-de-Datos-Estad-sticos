@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Crear Informe de PCR
+{% endblock title %}
+
+{% block content %}
+
+{% include 'header.html' %}
+<div class="contenedorc" >
+    <h4 style="text-align: center;" > 
+     Informe de PCR</h4><br>
+
+    <form action="." method="POST">
+      {% csrf_token %}
+     <div class="input-group" style="width: 800px;">
+       <span class="input-group-text">Nombre y Apellidos</span>
+       <input type="text" aria-label="First name" class="form-control" name="{{form.nombre.html_name}}">
+       <input type="text" aria-label="Last name" class="form-control"name="{{form.apellido.html_name}}">
+     </div>
+     <div style="justify-content: center;">
+<table><tr><td>
+       <div class="pack_fis input-group mb-3" id="pack_fis" style="margin-top: 17px;">
+
+         <label class="input-group-text" id="inputGroup-sizing-default">Fecha de Inicio de Síntomas</label>
+
+         <div class="adyacente" style="width: 250px">
+         <input type="date" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca Fecha" name="{{form.fechais.html_name}}" id="campofecha">
+       </div>
+     </div>
+     
+
+       <div class="pack_ftm input-group mb-3" id="pack_ftm">
+         <label class="input-group-text" id="inputGroup-sizing-default">Fecha de Tomado de Muestras</label>
+
+         <div class="adyacente" style="width: 250px">
+         <input type="date" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca Fecha" name="{{form.fechatm.html_name}}" id="campofecha">
+         
+       </div>
+       </div>
+    
+     </td><td>
+     <div class="pack_consultorio input-group mb-3" id="pack_consultorio" > 
+
+         <label class="input-group-text" id="inputGroup-sizing-default">Ingresar Consultorio</label>
+         
+         <div class="adyacente" style="width: 200x">
+         <input type="text" class="input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca Consultorio" name="{{form.consultorio.html_name}}" id="consultorio">
+       </div>
+     </div>
+
+
+       <div class="input-group mb-3" style="align-items: center;"> 
+         <span class="input-group-text" id="inputGroup-sizing-default">Resultado de la Muestra</span>
+         <div class="form-check" style="margin-right: 25px; margin-left: 10px;">
+             <input class="form-check-input" type="radio" name="{{form.resultado.html_name}}" value="N" id="flexRadioDefault2" checked>
+             <label class="form-check-label" for="flexRadioDefault2">
+               Negativo
+             </label>
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="{{form.resultado.html_name}}" value="P" id="flexRadioDefault1">
+             <label class="form-check-label" for="flexRadioDefault1">
+               Positivo
+             </label>
+           </div>
+           
+         </div>
+       </td>
+     </tr>
+   </table>
+ </div>
+     <div class="hcbutton">
+       <button type="submit" class="btn btn-outline-primary">Ingresar</button>
+       <a href="{% url 'principal' %}"><button type="button" class="btn btn-outline-primary">Cancelar</button></a>
+       <a href="{% url 'mostrarpcr' %}"><button type="button" class="btn btn-outline-primary">Mostrar</button></a>
+     </div>          
+   </form>
+
+       <footer class="hcfooter">    
+         <div> <center>
+         <img class="img" src="{% static 'imag/images.jpg' %}" alt="Logotipo Salud Pública"> 
+          <div > 
+          <p class="pa">Ministerio de Salud Pública</p>
+          <p class="pa">UCI © 2022</p> 
+         </div>
+         </center>
+        </div>
+        </footer>  
+       </div>
+{% endblock content %}
+{% include 'footer.html' %}

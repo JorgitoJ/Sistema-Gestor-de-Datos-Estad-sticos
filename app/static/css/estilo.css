@@ -1,0 +1,253 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+article{
+    border: 10px ;
+    margin: 10px ;
+}
+.form-signin {
+    max-width: 200px;
+    /*padding: 15px;*/
+}
+footer{
+    background-color: white;
+}
+.iheader{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+nav {
+    align-items: center;
+    display: flex;
+}
+
+nav a{
+    padding-right: 20px ;
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+   height: 90px;
+   margin-right: 10px;
+}
+.lado{
+    display: flex;    
+}
+.sidebar{
+    display: block;
+    background-color: white;    
+    height: 100%;
+    width: 400px;
+    padding: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.n{    
+    
+    text-align: center;
+  }
+ul{
+    list-style: none;
+}
+.medio{
+        background-color: white;
+        padding: 40px;
+        margin: 70px;
+        height: 293px;
+        margin-top: 20px;    
+        border-radius: 5px;
+        width: 800px;
+        margin-bottom: 35px;
+        padding-top: 13px;
+}
+
+
+footer{
+    display: flex;
+    
+    padding: 10px;
+    bottom: -70px;
+    position:static;
+    justify-content: center; 
+    align-items: center;
+    margin: 180px; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    
+}
+.img{
+    height: 60px;
+}
+.pa{
+    height: 10px;
+    font-size: 10px;
+    color: gray;
+}
+.accordion-body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.nomhc{
+    display: block;
+   
+}
+.imghc{
+    display: flex;
+    align-items: center;
+}
+.contenedor{
+    padding: 50px;
+    margin: 150px;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.contenedorc{
+    padding: 50px;
+    margin: 170px;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.hcfooter{
+    margin: 50px;
+    margin-top: 10px;  
+    margin-bottom:-20px; 
+}
+.hcbutton{
+    margin-right: 10px;
+    text-align: center;
+    
+}
+.nuevo{
+background-color: white;
+padding: 20px;
+margin: 450px;
+border-radius: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.eliminar{
+    background-color: white;
+    padding: 20px;
+    margin: 450px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.autenticar{
+    background-color: white;
+    padding: 20px;
+    margin: 550px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.medioo{
+    background-color: white;
+    padding: 40px;
+    margin: 70px;
+    height: 293px;
+    margin-top: 20px;    
+    border-radius: 5px;
+    width: 800px;
+    margin-bottom: 35px;
+    padding-top: 80px;
+
+}
+
+#scroll{
+    text-overflow: Ellipsis;   
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.s{
+    display: flex;
+    align-items: center;
+    
+}
+.adyacente{
+    display: flex;
+    align-items: center;
+}
+.mensaje{
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(247, 49, 49);
+    padding: 0 10px;
+    border-radius: 5px;
+    display: none;
+}
+.mensaje_activo{
+    display: block;
+}
+
+.form_input_error{
+    font-size: 16px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form_input_error_activo{
+    display: block;
+}
+
+.mensaje-exito{
+    font-size: 16px;
+    color: rgb(81, 221, 81);
+    display: none;
+}
+.mensaje-exito-activo{
+    display: block;
+}
+
+.estado_c{
+position: absolute;
+right: 10px;
+z-index: 100;
+font-size: 16px;
+opacity: 0;
+}
+
+.div_usuario_correcto .estado_c{
+    color: rgb(81, 221, 81);
+    opacity: 1;
+}
+
+.div_usuario_incorrecto .input{
+    border: 3px solid rgb(247, 49, 49);
+}
+.div_usuario_incorrecto .estado_c{
+    color: rgb(247, 49, 49) ;
+    opacity: 1;
+}

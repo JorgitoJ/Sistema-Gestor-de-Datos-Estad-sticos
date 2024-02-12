@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Crear Hoja de Cargo
+{% endblock title %}
+{% block content %}
+{% include 'header.html' %}
+        <div class="contenedor">
+           <h4 style="text-align: center;"> 
+           Hoja de Cargo</h4><br>
+
+           <form action="." method="POST">
+             {% csrf_token %}
+            <table><tr><td>
+              <div class="pack_nombre input-group mb-3" id="pack_nombre">
+  
+              <label class="input-group-text"  id="inputGroup-sizing-default">Nombre</label>
+  
+              <div class="adyacente" style="width: 300px">           
+              <input type="text" class="entra_nombre input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca Nombre del paciente" name="{{form.nombre.html_name}}" id="nombre">
+              
+            </div>
+  
+             </div>
+            <div class="pack_nombre input-group mb-3" id="pack_nombre">
+  
+              <label class="input-group-text" id="inputGroup-sizing-default">Apellidos</label>
+  
+              <div class="adyacente" style="width: 300px">           
+            <input type="text" class="entra_nombre input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca Apellidos del paciente" name="{{form.apellido.html_name}}" id="nombre">
+           
+            </div>
+                 
+            </div>
+          </td>
+          <td>
+            <div class="pack_edad input-group mb-3" id="pack_edad">
+  
+              <label class="input-group-text" id="inputGroup-sizing-default">Edad</label>
+  
+              <div class="adyacente" style="width: 150px">
+              <input type="number" class="entra_edad input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca edad del Paciente" name="{{form.edad.html_name}}" id="edad">
+            </div>
+          
+            </div>
+          
+            {% comment %} {{form.sexo}} {% endcomment %}
+             <div class="input-group mb-3" style="align-items: center;"> 
+              <span class="input-group-text" id="inputGroup-sizing">Sexo</span>
+              <div class="form-check" style="margin-right: 25px; margin-left: 10px;">
+                  <input class="form-check-input" type="radio" name="{{form.sexo.html_name}}" value="M" id="flexRadioDefault3" checked>
+                  <label class="form-check-label" for="flexRadioDefault3">
+                    Masculino
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="{{form.sexo.html_name}}" value="F" id="flexRadioDefault4">
+                  <label class="form-check-label" for="flexRadioDefault4">
+                    Femenino
+                  </label>
+                </div>              
+              </div> 
+            
+          </td>        
+        </tr>
+         </table>
+              <div class="pack_direccion input-group mb-3" id="pack_direccion">
+  
+                <label class="input-group-text" id="inputGroup-sizing-default">Dirección</label>
+                
+                <div class="adyacente" style="width: 400px">
+                <input type="text" class="entra_direccion input form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Introduzca Dirección del paciente" name="{{form.direccion.html_name}}" id="direccion">
+                
+              </div>
+             
+           
+            <div style="padding-top: 17px;" class="pack_padecimientos input-group mb-3" id="pack_padecimientos">
+  
+              <label class="input-group-text" id="inputGroup-sizing-default">Padecimientos</label>
+  
+              <div class="adyacente" style="width: 400px">
+                <textarea class="form-control" name="{{form.padecimientos.html_name}}" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            </div>       
+          </div>
+  
+             <div style="display: block;">
+            
+            <div class="hcbutton">
+              <button type="submit" class="btn btn-outline-primary">Ingresar</button>
+              <a href="{% url 'principal' %}"><button type="button" class="btn btn-outline-primary">Cancelar</button></a>
+              <a href="{% url 'Mostrar' %}"><button type="button" class="btn btn-outline-primary">Mostrar</button></a>
+            </div>
+           </form>
+        
+    </div>
+    <footer class="hcfooter">    
+      <div> <center>
+      <img class="img" src="{% static 'imag/images.jpg' %}" alt="Logotipo Salud Pública"> 
+       <div > 
+       <p class="pa">Ministerio de Salud Pública</p>
+       <p class="pa">UCI © 2022</p> 
+      </div>
+      </center>
+     </div>
+     </footer>  
+  </div>
+ {% endblock content %}    
+
+

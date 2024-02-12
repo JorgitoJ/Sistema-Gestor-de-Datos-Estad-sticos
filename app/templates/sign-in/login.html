@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Autenticar Usuario
+{% endblock title %}
+
+{% block styles %}
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block bodyclass %} class="text-center "{% endblock %}
+
+{% block content %}
+
+    <div class="autenticar">
+
+        <img height=150px src="{% static 'imag/images.jpg' %}"  alt="Logotipo Salud Pública">
+      <h4 style="text-align: center;"> 
+       Bienvenido</h4><br>
+      
+
+       <form method="POST" class="form form-signin"  id="form">
+            {% csrf_token %}
+            {{ form.as_p }}
+     
+        <div class="hcbutton" style="margin-top: 8px;">
+        <button type="submit" class="btn btn-outline-primary">Iniciar Sesión</button>
+         </div>
+       </form>
+    
+     <footer class="hcfooter">
+    
+        <div> <center>
+          
+         <hr>
+         <div > 
+         <p class="pa">Ministerio de Salud Pública</p>
+         <p class="pa">UCI © 2022</p> 
+        </div>
+       </center>
+       </div>
+       </footer>  
+    </div>
+
+
+{% endblock %}
+
+
+

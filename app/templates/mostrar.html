@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Mostrar{% endblock title %}
+{% block content %}
+{% include 'header.html' %}
+
+<div class="contenedor">
+    <h4 style="text-align: center;">Hoja de Cargo</h4>
+<table id="example" class="table table-striped " style="width:100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Direccion</th>
+            <th>Padecimiento</th>
+            <th>Fecha Actual</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for hojacargo in object_list %}
+            <tr>
+                <td>{{hojacargo.nombre}}</td>
+                <td>{{hojacargo.apellido}}</td>
+                <td>{{hojacargo.edad}}</td>
+                <td>{{hojacargo.sexo}}</td>
+                <td>{{hojacargo.direccion}}</td>
+                <td>{{hojacargo.padecimientos}}</td>
+                <td>{{hojacargo.fecha}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="hcbutton">
+    <a href="{% url 'hojadecargo' %}"><button type="button" class="btn btn-outline-primary">Atrás</button></a>
+  </div>
+</div>
+
+
+
+{% endblock%}
